@@ -47,47 +47,37 @@ function paintToCanvas() {
     }, 16);
 }
 
-
-/* function paintRedEffect() {
-    const width = video.videoWidth;
-    const height = video.videoHeight;
-    canvas.width = width;
-    canvas.height = height;
-
-    setInterval(() => {
-        ctx.drawImage(video, 0, 0, width, height);
-        //take the pixels out
-        let pixels = ctx.getImageData(0, 0, width, height);
-        //mess with them
-        pixels = redEffect(pixels);
-        //put them back
-        ctx.putImageData(pixels, 0, 0);
-
-    }, 16);
-} */
-
 function greenScreenEffectClick() {
-    greenScreenButton.value = "True";
+    if(greenScreenButton.value === "False"){
+        greenScreenButton.value = "True";
+    } else if (greenScreenButton.value === "True"){
+        greenScreenButton.value = "False"
+    } 
     rgbButton.value = "False"
     redButton.value = "False";
-    console.log(redButton.value, rgbButton.value, greenScreenButton.value)
     paintToCanvas();
 }
 
 
 function redEffectClick (){
-    redButton.value = "True"
+    if(redButton.value === "False"){
+        redButton.value = "True"
+    } else if (redButton.value === "True"){
+        redButton.value = "False"
+    }    
     greenScreenButton.value = "False";
     rgbButton.value = "False";
-    console.log(redButton.value, rgbButton.value, greenScreenButton.value)
     paintToCanvas();
 }
 
 function rgbEffectClick(){
+    if(rgbButton.value === "False"){
+        rgbButton.value = "True";
+    } else if (rgbButton.value === "True"){
+        rgbButton.value = "False"
+    } 
     redButton.value = "False"
     greenScreenButton.value = "False";
-    rgbButton.value = "True";
-    console.log(redButton.value, rgbButton.value, greenScreenButton.value)
     paintToCanvas();
 }
 
