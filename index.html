@@ -10,6 +10,9 @@
   <div class="photobooth">
     <div class="controls">
       <button onClick="takePhoto()">Take Photo</button>
+      <button class="redButton" onClick="redEffectClick()" value="False">Red Effect</button>
+      <button class="greenScreenButton" onClick="greenScreenEffectClick()" value="False">Green Screen Effect</button>
+      <button class="rgbButton" onClick="rgbEffectClick()" value="False">RGB Split Effect</button>
       <div class="rgb">
         <label for="rmin">Red Min:</label>
         <input type="range" min=0 max=255 name="rmin">
